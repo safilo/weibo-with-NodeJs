@@ -152,7 +152,7 @@ utils.on(document, "click", function(ev) {
             commentBox = utils.getByClass(WBRepeat, "wb-comment-wrapper")[0],
             commentUL = utils.getByClass(commentBox, "wb-comment-ul")[0];
         replyRid = target.getAttribute("rid");
-        console.log('2222222222222222222',replyRid)
+
         commentUL.innerHTML = "";
 
         if (WBRepeat.style.display == "none") {
@@ -217,6 +217,14 @@ utils.on(document, "click", function(ev) {
         // 获取当前文本框
         curTextarea = utils.prev(target.parentNode.parentNode).getElementsByTagName("textarea")[0];
         var result = formartText(curTextarea.value);
+
+
+        curTextarea.value = "";
+        aSelectFaces = [];
+
+        // 生成评论
+        if (!result) return;
+
         if (utils.hasClass(target, "publish-replay")) {
             var curReplyBox = target.parentNode.parentNode.parentNode.parentNode,
                 curUserName = utils.prev(utils.prev(curReplyBox)).getElementsByTagName("a")[0].getAttribute("nickName");
@@ -226,12 +234,6 @@ utils.on(document, "click", function(ev) {
             result = '<a href="javascript:void(0);" nickName="' + username + '">' + username + '</a>：' + result;
         }
 
-        curTextarea.value = "";
-        aSelectFaces = [];
-
-        // 生成评论
-        if (!result) return;
-
         var commentData = {
             blog: replyRid,
             user: username,
@@ -240,7 +242,6 @@ utils.on(document, "click", function(ev) {
             releaseTime: Date.now(),
             praiseCount: 0
         };
-        console.log('ajax------------------',replyRid);
         ajax({
             url: '/blog/publishReply',
             type: 'POST',
@@ -366,8 +367,6 @@ ajax({
 
 // 加载微博
 function loadBlog(data) {
-    console.log('publishBlog : ', data);
-
     var rid = data._id,
         nickName = data.user,
         userFace = data.userFace,
@@ -399,7 +398,6 @@ function loadBlog(data) {
     utils.getByClass(curWrap, "host-praise-count")[0].innerHTML = praiseCount || "赞";
 
     if (!isForward) {
-        console.log('加载原创微博', img, img[0])
         var str = "";
         str += '<li class="feed-media-video">';
         str += '<img src="' + img[0] + '" alt="data-img"/>';
@@ -474,7 +472,7 @@ function formartText(str) {
         console.log("@ is success");
     }
     // 表情
-    var faceReg = /\[(\w||[\u4e00-\u9fa5])+\]/g; /* console.log(str)*/
+    var faceReg = /\[(\w||[\u4e00-\u9fa5])+\]/g;
     if (faceReg.test(str)) {
         str = str.replace(faceReg, function() {
             var isIn = false;
@@ -543,7 +541,6 @@ function refreshCheckbox() {
 }
 
 window.onload = function() {
-    console.log('window.onload');
     if (flashBox) {
         var onloadTimer = setTimeout(function() {
             flashBox.style.display = 'none';
