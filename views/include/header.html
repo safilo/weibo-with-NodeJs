@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>我的首页 微博-随时随地发现新鲜事</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="/stylesheets/reset.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body <% if(user) { %> id=<%= user.username %> <% } %> <% if(!user) { %>  style="background-color: #d4d5e0;background-image: url('images/main/index-bg.png');background-repeat: repeat-x;background-position: center 0;" <% } %>>
+    <% var headerWidth = '1000px',logoWidth = '150px',serchWidth = '600px' %>
+
+                <% if(success) { %>
+                    <div id="flash-box" class="model-box flash-box">
+                        <div class="mb-content">
+                            <span class="wb-icon flash-success"></span>
+                            <span class="flash-text"><%= success %></span>
+                        </div>
+                    </div>
+                <% } %>
+                <% if(error) { %>
+                    <div id="flash-box" class="model-box flash-box">
+                        <div class="mb-content">
+                            <span class="wb-icon flash-error"></span>
+                            <span class="flash-text"><%= error %></span>
+                        </div>
+                    </div>
+                <% } %>
+
+
+    <div class="header">
+        <div class="header-nav clearfix"  <% if(!user) { %> style="width:<%= headerWidth %> <% } %>">
+            <div class="hn-logo" <% if(!user) { %> style="width:<%= logoWidth %>" <% } %>>
+                <a href="javascript:void(0);"></a>
+            </div>
+            <div class="hn-search"  <% if(!user) { %> style="width:<%= serchWidth %> <% } %>">
+                <span class="placeholder">大家都在搜：微博-随时随地发现新鲜事</span>
+                <input type="text">
+                <a href="javascript:void(0);"></a>
+                <div class="hn-search-select">
+                    <div class="selectList">
+                        <!-- 搜索下拉框 -->
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);"><i class="icon-num-red">1</i>分手 我重新追你</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="icon-num-orange">2</i>微博-随时随地发现新鲜事</a>
+                            </li>
+                            <li>`
+                                <a href="javascript:void(0);"><i class="icon-num-orange">3</i>微博-随时随地发现新鲜事</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="icon-num-orange">4</i>微博-随时随地发现新鲜事</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="hn-menu">
+                <% if(!user) { %>
+                    <div class="hn-menu-nav">
+                        <ul>
+                            <li>
+                                <a id="register" class="hn-nav-home" href="javascript:void(0);">
+                                    <span>注册</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="login" class="hn-nav-find" href="javascript:void(0);">
+                                    <span>登录</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                <% } else { %>
+                <div class="hn-menu-nav">
+                    <ul>
+                        <li>
+                            <a class="hn-nav-home" href="/blog/getBlog">
+                                <i class="hn-nav-icon"></i>
+                                <span>首页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hn-nav-find" href="javascript:void(0);">
+                                <i class="hn-nav-icon"></i>
+                                <span>发现</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hn-nav-game" href="javascript:void(0);">
+                                <i class="hn-nav-icon"></i>
+                                <span>游戏</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hn-nav-user" href="javascript:void(0);">
+                                <i class="hn-nav-icon"></i>
+                                <span><%= user.username %></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hn-menu-tools">
+                    <div class="tool-list">
+                        <a class="hn-nav-message" href="javascript:void(0);">
+                            <i class="hn-nav-icon"></i>
+                        </a>
+                        <div class="tool-list-box message">
+                            <div class="layer-arrow-t">
+                                <i></i>
+                                <em></em>
+                            </div>
+                            <ul>
+                                <li><a href="javascript:void(0);">@我的</a></li>
+                                <li><a href="javascript:void(0);">评论</a></li>
+                                <li><a href="javascript:void(0);">赞</a></li>
+                                <li class="box-line1"></li>
+                                <li><a href="javascript:void(0);">私信</a></li>
+                                <li><a href="javascript:void(0);">未关注人私信</a></li>
+                                <li><a href="javascript:void(0);">群通知</a></li>
+                                <li class="box-line2"></li>
+                                <li class="text-center"><a href="javascript:void(0);">消息设置</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tool-list">
+                        <a class="hn-nav-setting" href="javascript:void(0);">
+                            <i class="hn-nav-icon"></i>
+                        </a>
+                        <div class="tool-list-box setting">
+                            <div class="layer-arrow-t">
+                                <i></i>
+                                <em></em>
+                            </div>
+                            <ul>
+                                <li><a href="javascript:void(0);">账号设置</a></li>
+                                <li><a href="javascript:void(0);">会员中心</a></li>
+                                <li><a href="javascript:void(0);">V认证</a></li>
+                                <li><a href="javascript:void(0);">账号设置</a></li>
+                                <li><a href="javascript:void(0);">隐私设置</a></li>
+                                <li><a href="javascript:void(0);">消息设置</a></li>
+                                <li><a href="javascript:void(0);">帮助中心</a></li>
+                                <li class="box-line2"></li>
+                                <li class="text-center"><a href="/user/logout">退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tool-list">
+                        <a class="hn-nav-release" id="hn-tool-rls" href="javascript:void(0);">
+                            <i class="hn-nav-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <% }  %>
+
+            </div>
+        </div>
+    </div>

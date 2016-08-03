@@ -1,0 +1,37 @@
+<style>
+    .shade-box {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.3;
+    }
+
+    .layer-model .model-box {
+        position: fixed;;
+        top: 50%;
+        left: 50%;
+        z-index: 99999;
+        transform: translate(-50%, -50%);
+    }
+
+    .layer-model .mb-content {
+        padding: 35px 116px 29px 116px;
+    }
+</style>
+<div class="layer-model" <% if(user) { %> style="display:none;" <% } %>>
+    <div class="shade-box"></div>
+    <div id="layer-model"  class="model-box" style="display: block;">
+        <div class="mb-content">
+            <div class="mb-close">
+                <a href="javascript:void(0)">×</a>
+            </div>
+
+            <%include ../user/reg-login.html %>
+
+        </div>
+    </div>
+</div>

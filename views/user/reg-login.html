@@ -1,0 +1,82 @@
+<style>
+    .reg-login-tab {
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .rl-tab-btn {
+        display: inline-block;
+        padding: 0 0 10px;
+        width: 185px;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 3px solid #fff;
+        text-align: center;
+    }
+
+    .rl-tab-btn.active {
+        border-color: #f7691d;
+    }
+
+    .reg-login-form {
+        padding: 30px 70px 30px;
+        min-height:200px;
+    }
+
+    .r-l-ipt-box {
+        padding: 0 0 0 30px;
+        margin: 0 0 10px 0;
+        width: 198px;
+        height: 30px;
+        border: 1px solid #cccccc;
+        background: url('/images/main/user-input.png') no-repeat;
+    }
+
+    .r-l-ipt {
+        width: 190px;
+        height: 28px;
+        border: none;
+    }
+
+    .r-l-ipt-password {
+        background-position: 0 -30px;
+    }
+
+    .r-l-btn {
+        width: 230px;
+        height: 36px;
+        border: 1px solid #f77c3d;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #ff8140;
+        cursor:pointer;
+    }
+</style>
+<div class="reg-login-tab">
+    <a id="r-l-tab-reg" href="javascript:void(0)" class="rl-tab-btn">注册</a>
+    <a id="r-l-tab-log" href="javascript:void(0)" class="rl-tab-btn active">登录</a>
+</div>
+<div class="reg-login-form">
+    <form id="register-form"  action="/user/reg" method="post" style="display:none;">
+        <div class="r-l-ipt-box">
+            <input type="text" class="r-l-ipt" name="username" id="username" placeholder="用户名">
+        </div>
+        <div class="r-l-ipt-box  r-l-ipt-password">
+            <input type="password" class="r-l-ipt" name="password" id="password" placeholder="请输入密码">
+        </div>
+        <div class="r-l-ipt-box  r-l-ipt-password">
+            <input type="password" class="r-l-ipt" name="repassword" id="repassword" placeholder="请确认密码">
+        </div>
+        <button type="submit" class="r-l-btn">注册</button>
+    </form>
+
+    <form id="login-form" action="/user/login" method="post">
+        <div class="r-l-ipt-box">
+            <input type="text" class="r-l-ipt" name="username" id="username" placeholder="用户名">
+        </div>
+        <div class="r-l-ipt-box  r-l-ipt-password">
+            <input type="password" class="r-l-ipt" name="password" id="password" placeholder="请输入密码">
+        </div>
+        <button type="submit" class="r-l-btn">登录</button>
+    </form>
+</div>

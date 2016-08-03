@@ -1,0 +1,82 @@
+<!-- 右侧信息 开始 -->
+<div class="main-right">
+    <% if(user) { %>
+    <div class="mr-mod">
+        <div class="mr-mod-carwrap">
+            <div class="mr-carwrap-person">
+                <div class="mr-person-cover">
+                    <div class="mr-cover-circle">
+                        <a href="javascript:void(0);">
+                            <img src="/images/user-cover/cover-circle-2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="mr-carwrap-inner">
+                    <div class="person-name-box">
+                        <a class="per-username" href="javascript:void(0);"><%= user.username %></a>
+                        <a href="javascript:void(0);">
+                            <i class="wb-icon wb-icon-member4"></i>
+                        </a>
+                        <a class="per-level" href="javascript:void(0);">
+                            <span title="微博等级23 升级有好礼">Lv23</span>
+                        </a>
+                    </div>
+                    <div class="person-atten">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <strong>534</strong>
+                                </a>
+                                <br>
+                                <span>关注</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <strong>8345</strong>
+                                </a>
+                                <br>
+                                <span>粉丝</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <strong>3242</strong>
+                                </a>
+                                <br>
+                                <span>微博</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mr-mod">
+        <div class="mr-mod-carwrap">
+            <img class="carwrap-img" src="/images/main/carwrap-img4.jpg" alt="">
+        </div>
+    </div>
+    <div class="mr-mod">
+        <div class="mr-mod-carwrap">
+            <img class="carwrap-img" src="/images/main/carwrap-img2.jpg" alt="">
+        </div>
+    </div>
+     <div class="mr-mod" >
+        <div class="mr-mod-carwrap">
+          <img class="carwrap-img" src="/images/main/carwrap-img1.jpg" alt="">
+        </div>
+    </div>
+    <div class="mr-mod" >
+        <div class="mr-mod-carwrap">
+          <img class="carwrap-img" src="/images/main/carwrap-img3.jpg" alt="">
+        </div>
+    </div>
+
+    <% } else { %>
+        <div class="mr-mod" >
+            <div class="mr-mod-carwrap">
+              <h1 style="text-align:center;padding:40px 0;">请登录</h1>
+            </div>
+        </div>
+    <% } %>
+</div>
+<!-- 右侧信息 结束 -->

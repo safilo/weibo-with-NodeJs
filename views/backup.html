@@ -1,0 +1,282 @@
+<%include ./include/header.html %>
+
+    <div class="container" style="background:url('/images/main/index-bg.jpg') no-repeat top center">
+        <div class="main">
+            <div class="main-section clearfix" style="background:rgba(36,61,89,0.25)">
+
+                <%include ./include/main-sidebar.html %>
+
+                    <!-- 微博显示区域 开始 -->
+                    <div class="main-content">
+
+                        <!-- 微博显示区域 开始 -->
+                        <div class="wb-feed-home clearfix">
+                            <div id="wb-feed-container" class="wb-feed-container">
+                                <div class="wb-feed-wrapper hidden">
+                                    <div class="wb-feed-detail clearfix">
+                                        <div class="wb-feed-face">
+                                            <a class="host-user-face" href="javascript:void(0);">
+                                                <img src="/images/user-face/user1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="wb-detail">
+                                            <div class="wb-feed-info">
+                                                <a class="host-nickName" href="javascript:void(0);">
+                                                    <!-- 程序员俱乐部 -->
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="wb-icon wb-icon-approve"></i>
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="wb-icon wb-icon-member4"></i>
+                                                </a>
+                                            </div>
+                                            <div class="wb-feed-from">
+                                                <a class="host-release-time" href="javascript:void(0);">
+                                                    <!-- 6月26日 01:37 -->
+                                                </a> 来自
+                                                <a href="javascript:void(0)" target="_blank">
+                                                weibo.com
+                                            </a>
+                                            </div>
+                                            <div class="wb-feed-text host-text">
+                                                <!-- <a href="javascript:void(0)">@W3CPlus</a><a href="javascript:void(0)">@用户</a>【提高Web页面性能的技巧】现在动辄几兆大小的页面加载量，让性能优化成了不可避免的热门话题。WEB 应用越流畅，用户体验就会越好，继而带来更多的访问量。O网页链接（来自： <a href="javascript:void(0)">W3CPlus</a>） -->
+                                            </div>
+                                            <div class="wb-feed-media">
+                                                <div class="media-box media-host-box">
+                                                    <ul>
+                                                        <!-- <li class="feed-media-video"><img src="/images/feedimg/feedimg1.jpg" alt=""></li> -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="wb-feed-farward" style="display: none;">
+                                                <div class="wb-forward-bg">
+                                                    <div class="wb-feed-info">
+                                                        <a class="forward-nickName" href="javascript:void(0);">
+                                                            <!-- @程序员俱乐部 -->
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="wb-icon wb-icon-approve"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="wb-icon wb-icon-member4"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="wb-feed-text forward-text">
+                                                        <!-- <a href="javascript:void(0)">@W3CPlus</a><a href="javascript:void(0)">@用户</a>【提高Web页面性能的技巧】现在动辄几兆大小的页面加载量，让性能优化成了不可避免的热门话题。WEB 应用越流畅，用户体验就会越好，继而带来更多的访问量。O网页链接（来自： <a href="javascript:void(0)">W3CPlus</a>） -->
+                                                    </div>
+                                                    <div class="wb-feed-media">
+                                                        <div class="media-box">
+                                                            <ul>
+                                                                <li class="feed-media-video"><img src="/images/feedimg/feedimg1.jpg" alt=""></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wb-forward-func clearfix">
+                                                        <div class="wb-feed-from forward-release-time">
+                                                            <a href="javascript:void(0);">
+                                                6月26日 01:37
+                                            </a> 来自
+                                                            <a href="javascript:void(0);">
+                                                Android
+                                            </a>
+                                                        </div>
+                                                        <div class="wb-forward-handle">
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="func-handle-forward" href="javascript:void(0);">
+                                                                        <i>转</i>
+                                                                        <span class="func-handle-forward-c">2164</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="func-handle-comment" href="javascript:void(0);">
+                                                                        <i>评</i>
+                                                                        <span class="func-handle-comment-c">3164</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="func-handle-praise" href="javascript:void(0);">
+                                                                        <i class="wb-icon">赞</i>
+                                                                        <span class="func-handle-praise-c">364</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wb-feed-handle">
+                                        <div class="wb-handle-box">
+                                            <ul class="clearfix">
+                                                <li class="wb-row4">
+                                                    <a class="handle-collect" href="javascript:void(0);">
+                                                        <i>S</i>
+                                                        <span>收藏</span>
+                                                    </a>
+                                                </li>
+                                                <li class="wb-row4">
+                                                    <a class="handle-forward" href="javascript:void(0);">
+                                                        <i>Z</i>
+                                                        <span class="host-forward-count">转发</span>
+                                                    </a>
+                                                </li>
+                                                <li class="wb-row4">
+                                                    <a class="handle-comment" href="javascript:void(0);">
+                                                        <i>P</i>
+                                                        <span class="host-comment-count">评论</span>
+                                                    </a>
+                                                </li>
+                                                <li class="wb-row4">
+                                                    <a class="handle-praise" href="javascript:void(0);">
+                                                        <i class="wb-icon">Z</i>
+                                                        <span class="host-praise-count"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="wb-feed-repeat" style="display: none;">
+                                            <div class="layer-arrow-t">
+                                                <i></i>
+                                                <em></em>
+                                            </div>
+                                            <div class="wb-comment clearfix">
+                                                <div class="wb-feed-publish clearfix">
+                                                    <div class="wb-comment-face"><img src="/images/user-face/user1.jpg" alt=""></div>
+                                                    <div class="wb-publish">
+                                                        <div class="wb-publish-input">
+                                                            <textarea name="" id=""></textarea>
+                                                        </div>
+                                                        <div class="wb-publish-opt clearfix">
+                                                            <div class="publish-opt clearfix">
+                                                                <a class="send-exp-btn" href="javascript:void(0);">
+                                                                    <i class="comment-send-expression">E</i>
+                                                                </a>
+                                                                <a class="" href="javascript:void(0);">
+                                                                    <i class="comment-send-img"></i>
+                                                                </a>
+                                                                <a href="javascript:void(0);">
+                                                                    <label class="optLabel" for="forward-1">
+                                                                        <input id="forward-1" type="checkbox">
+                                                                        <span>同时转发到我的微博</span>
+                                                                    </label>
+                                                                </a>
+                                                            </div>
+                                                            <div class="publish-btn">
+                                                                <a class="publish-comment-btn" href="javascript:void(0)">发布</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="wb-comment-wrapper" style="display: none;">
+                                                    <div class="wb-comment-tab clearfix">
+                                                        <div class="comment-tab-list">
+                                                            <ul class="clearfix">
+                                                                <li><a href="javascript:void(0);">全部</a></li>
+                                                                <li><a href="javascript:void(0);">热门</a></li>
+                                                                <li><a href="javascript:void(0);">认证用户</a></li>
+                                                                <li><a href="javascript:void(0);">关注的人</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="wb-comment-count">
+                                                            <span>共1170条</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wb-comment-box">
+                                                        <ul class="wb-comment-ul">
+                                                            <li class="wb-comment-list clearfix">
+                                                                <div class="wb-comment-face"><img class="wb-comment-faceImg" src="/images/user-face/user2.jpg" alt=""></div>
+                                                                <div class="wb-comment-content">
+                                                                    <div class="wb-feed-text">这是评论文字这是评论文字这是评论文字</div>
+                                                                    <div class="wb-comment-func clearfix">
+                                                                        <div class="wb-feed-from float-l">
+                                                                            <a class="comment-release-time" href="javascript:void(0);">
+                                                                            6月26日 01:37
+                                                                         </a>
+                                                                        </div>
+                                                                        <div class="wb-forward-handle">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);">
+                                                                                        <span>举报</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="reply-btn" href="javascript:void(0);">
+                                                                                        <span>回复</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="comment-func-praise" href="javascript:void(0);">
+                                                                                        <i class="wb-icon">赞</i>
+                                                                                        <span class="comment-praise-count">364</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- <div class="wb-comment-reply">
+                                                                    <div class="layer-arrow-t">
+                                                                        <i></i>
+                                                                        <em></em>
+                                                                    </div>
+                                                                    <div class="wb-publish">
+                                                                        <div class="wb-publish-input">
+                                                                            <textarea name="" id=""></textarea>
+                                                                        </div>
+                                                                        <div class="wb-publish-opt clearfix">
+                                                                            <div class="publish-opt clearfix">
+                                                                                <a href="javascript:void(0);">
+                                                                                    <i>E</i>
+                                                                                </a>
+                                                                                <a href="javascript:void(0);">
+                                                                                    <i>I</i>
+                                                                                </a>
+                                                                                <a href="javascript:void(0);">
+                                                                                    <label for="forward-2">
+                                                                                        <input id="forward-2" type="checkbox">
+                                                                                        <span>同时转发到我的微博</span>
+                                                                                    </label>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="publish-btn">
+                                                                                <a href="javascript:void(0)">发布</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> -->
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 微博显示区域 结束 -->
+
+                    <%include ./include/main-right.html %>
+
+            </div>
+        </div>
+    </div>
+
+    <%include ./include/footer.html %>
+    <%include ./uicomponent/expression.html %>
+    <%include ./uicomponent/publish-kind.html %>
+    <%include ./uicomponent/layer-model.html %>
+
+    </div>
+    <script type="text/javascript" src="/javascripts/utils.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/javascripts/ajax.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/javascripts/data.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/javascripts/index.js" charset="utf-8"></script>
+    </body>
+
+    </html>
