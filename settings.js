@@ -1,4 +1,7 @@
 module.exports = {
-    cookieSecret : 'wlqing',
-    url : 'mongodb://localhost:37017/weibo'
+    cookieSecret:'wusafilo',
+    db:'wlqing',
+    host:'123.57.143.189',
+    port:27017,
+    url:"mongodb://123.57.143.189:27017/wlqing"
 };
