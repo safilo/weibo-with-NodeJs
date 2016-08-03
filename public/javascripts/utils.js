@@ -330,8 +330,9 @@ var utils = (function() {
     // getParentByClass: 找到curEle拥有类名为strClass的第一个父元素
     function getParentByClass(curEle, strClass) {
         var par = curEle.parentNode;
-        console.log(par.className);
-        while (par) {console.log(par.className);
+        // console.log(par.className);
+        while (par) {
+            // console.log(par.className);
             if(this.hasClass(par, strClass)) {
                 return par;
             }

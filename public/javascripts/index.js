@@ -213,7 +213,6 @@ utils.on(document, "click", function(ev) {
         var WBRepeat = utils.getParentByClass(target, "wb-feed-repeat"),
             wrapper = utils.getByClass(WBRepeat, "wb-comment-wrapper")[0],
             commentUL = utils.getByClass(WBRepeat, "wb-comment-ul")[0];
-        wrapper.style.display = "block";
         // 获取当前文本框
         curTextarea = utils.prev(target.parentNode.parentNode).getElementsByTagName("textarea")[0];
         var result = formartText(curTextarea.value);
@@ -224,6 +223,8 @@ utils.on(document, "click", function(ev) {
 
         // 生成评论
         if (!result) return;
+
+        wrapper.style.display = "block";
 
         if (utils.hasClass(target, "publish-replay")) {
             var curReplyBox = target.parentNode.parentNode.parentNode.parentNode,
@@ -456,6 +457,7 @@ utils.on(hostReleaseTextarea, "keyup", function() {
  */
 function formartText(str) {
     // 网址
+    var reg = /(\/\w+\.?\w+)/
     var linkReg = /(http(s)?:\/\/)(www\.)?[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+(:\d+)*(\/\w+\.?\w+)*([\?&]\w+=\w*)*/g;
     if (linkReg.test(str)) {
         str = str.replace(linkReg, function() {
