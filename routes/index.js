@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express'),
+    router = express.Router();
+    middle = require('../middle');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', middle.checkNotLogin, function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/:username/home', function(req, res, next) {
+router.get('/:username/home', middle.checkLogin, function(req, res, next) {
     res.render('user/home');
 });
 
