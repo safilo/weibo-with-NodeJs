@@ -457,7 +457,8 @@ utils.on(hostReleaseTextarea, "keyup", function() {
  */
 function formartText(str) {
     // 网址
-    var linkReg = /(http(s)?:\/\/)(www\.)?[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+(:\d+)*(\/\w+-?\.?\w*)*([\?&]\w+=\w*)*/g;
+    var reg = /(\/\w+-{0,1}\w?\.?\w*)*/
+    var linkReg = /(http(s)?:\/\/)(www\.)?[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+(:\d+)*(\/\w+[\.-\w]*)*([\?&]\w+=\w*)*/g;
     if (linkReg.test(str)) {
         str = str.replace(linkReg, function() {
             return '<a href="' + arguments[0] + '" target="_blank">' + arguments[0] + '</a>';
