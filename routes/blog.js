@@ -43,7 +43,7 @@ router.post('/publishBlog', middle.checkLogin, function(req, res, next) {
     }
 });
 
-router.get('/getComment', middle.checkLogin, function(req, res, next) {
+router.get('/getComment', function(req, res, next) {
     Model('Comment').find({
         blog: req.query.rid
     }, function(err, doc) {
