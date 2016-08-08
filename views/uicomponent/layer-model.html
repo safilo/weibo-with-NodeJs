@@ -8,10 +8,11 @@
         height: 100%;
         background-color: #000;
         opacity: 0.3;
+        filter:alpha(opacity=30);
     }
 
     .layer-model .model-box {
-        position: fixed;;
+        position: fixed;
         top: 50%;
         left: 50%;
         z-index: 99999;
@@ -22,6 +23,8 @@
         padding: 35px 116px 29px 116px;
     }
 </style>
+<!-- if gt IE8>
+<  !--  >
 <div class="layer-model" <% if(user) { %> style="display:none;" <% } %>>
     <div class="shade-box"></div>
     <div id="layer-model"  class="model-box" style="display: block;">
