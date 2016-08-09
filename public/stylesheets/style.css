@@ -42,7 +42,9 @@ a {
 .hidden {
     display: none;
 }
-
+.text-center {
+    text-align:center;
+}
 /* -- UI Module start -- */
 
 

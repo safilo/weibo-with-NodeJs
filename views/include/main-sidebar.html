@@ -1,5 +1,6 @@
 <!-- 左侧导航 开始 -->
 <div class="main-sidebar" fixed-box="true">
+    <% if(user) { %>
     <div class="msb-nav">
         <h3 class="msb-level"><a href="javacript:void(0);">
         <span>首页</span>
@@ -87,5 +88,15 @@
         </div>
     </div>
     <!-- 分组区域 结束 -->
+    <% } else { %>
+        <!-- 首页侧边栏数据 -->
+        <% for (var i = 0;i < sidebar.length; ++i) { %>
+            <div class="msb-nav">
+                <h3 class="msb-level text-center"><a href="javacript:void(0);">
+                <span><%= sidebar[i] %></span>
+            </a></h3>
+            </div>
+        <% } %>
+    <% } %>
 </div>
 <!-- 左侧导航 结束 -->

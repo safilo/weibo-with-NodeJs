@@ -23,8 +23,16 @@
         padding: 35px 116px 29px 116px;
     }
 </style>
-<!-- if gt IE8>
-<  !--  >
+<!--[if lt IE 8]>
+<style>
+.layer-model .model-box {
+    position: fixed;
+    top: 30px;
+    margin:0 auto;
+    z-index: 99999;
+}
+</style>
+<![endif]-->
 <div class="layer-model" <% if(user) { %> style="display:none;" <% } %>>
     <div class="shade-box"></div>
     <div id="layer-model"  class="model-box" style="display: block;">
